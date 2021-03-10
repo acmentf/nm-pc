@@ -1,0 +1,10 @@
+.el-popover{
+  background: transparent;
+  border:none;
+  border-radius: 6px;
+  margin-top:8px !important;
+  padding:0;
+}
+.el-popper .popper__arrow, .el-popper .popper__arrow::after{
+  display: none;
+}

@@ -1,0 +1,31 @@
+{
+  "name": "nuxt-ti-pc",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "test": "cross-env BASE_URL=https://ti-api.inkr.xyz NODE_ENV=test nuxt build",
+    "build": "cross-env BASE_URL=https://api.t1play.com NODE_ENV=production nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.12.2",
+    "core-js": "^3.6.5",
+    "dayjs": "^1.10.4",
+    "echarts": "^4.9.0",
+    "element-ui": "^2.14.1",
+    "gojs": "^2.1.32",
+    "nuxt": "^2.14.6",
+    "swiper": "^6.4.5",
+    "videojs-contrib-hls": "^5.15.0",
+    "vue-aliplayer-v2": "^1.2.8",
+    "vue-awesome-swiper": "^4.1.1",
+    "vue-video-player": "^5.0.2"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "less": "^3.12.2",
+    "less-loader": "^7.1.0"
+  }
+}

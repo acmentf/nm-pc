@@ -1,0 +1,346 @@
+@charset "utf-8";
+
+html {
+  font-family: 'Microsoft YaHei';
+  font-size: 16px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  color: #333;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  background: #fff;
+  -webkit-box-sizing: border-box;
+  overflow-y: overlay;
+  margin: 0;
+}
+button,
+input,
+textarea {
+  border: none;
+  -webkit-outline: none;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-appearance: none;
+  border-radius: 0;
+  padding: 0;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+a {
+  text-decoration: none;
+}
+a:focus,
+a.active,
+a:hover {
+  text-decoration: none;
+}
+/*--- 元素多余间距值 ---*/
+ul,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+em,
+i {
+  font-style: normal;
+}
+img {
+  vertical-align: middle;
+}
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text-center{
+  text-align: center;
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+.home-text{
+  color:#33C6D6;
+}
+.away-text{
+  color:#F05365;
+}
+.page-enter-active,.page-leave-active{
+  transition: opacity 0.15s;
+}
+.page-enter,.page-leave-active{
+  opacity: 0;
+}
+
+
+
+// 不换行加省略号样式 by FeikeQ
+.nowrap{
+    white-space: nowrap;  
+    text-overflow:ellipsis; 
+    overflow:hidden;
+}
+   
+/* 表格样式 by FeikeQ */
+.el-table, .el-table__expanded-cell {
+    background: rgba(255, 255, 255, 0.6);
+    color:#666;
+    font-size: 14px;
+    width:100%;
+    border-radius:6px;
+}
+.el-table.el-table--small{
+    background-color: transparent;
+}
+.el-table .cell {
+    line-height: 30px;
+} 
+.el-table .nowrap .cell {
+    line-height: 30px;
+    white-space: nowrap;  
+    text-overflow:ellipsis; 
+    overflow:hidden;
+} 
+
+.el-table th, .el-table tr {
+    background-color: transparent;
+}
+.el-table th{
+    font-size: 14px;
+}
+.el-table--small .el-table th, .el-table--small.el-table tr {
+    background-color:transparent;
+}
+.el-table--small.el-table th>.cell , .el-table--small.el-table .cell {
+    padding-left:0;
+    padding-right:0;
+}
+.el-table--small.el-table .caret-wrapper{
+    margin-left: -5px;
+}
+
+
+.el-table th{
+    background-color: transparent;
+}
+.cell span{
+    line-height: 30px;
+}
+
+.el-table td, .el-table th {
+    padding: 4px 0;
+}
+.el-table .thesmall td{
+    padding: 0;
+}
+
+.el-table--small.el-table td, .el-table th {
+    padding:0;
+}
+
+.el-table--enable-row-hover .el-table__body tr:hover{
+    background: linear-gradient(135deg,rgba(101,33,215,0.3) 0%,rgba(191,73,235,0.3) 100%);
+}
+.el-table--enable-row-hover .el-table__body tr:hover>td {
+    background-color:transparent;
+}
+
+.el-table td, .el-table th.is-leaf {
+    border-color: transparent;
+}
+.el-table--border::after, .el-table--group::after, .el-table::before {
+    background-color:transparent;
+}
+
+/* 翻页样式 by FeikeQ */
+.el-pagination{
+    margin: 10px -10px 10px 0;
+    text-align: right;
+}
+.el-pagination.is-background .btn-next, .el-pagination.is-background .btn-prev, .el-pagination.is-background .el-pager li {
+    background-color: transparent;
+    color: #999;
+    border:1px solid #999;
+    font-weight: normal;
+    border-radius: 4px;
+}
+.el-pager li {
+    line-height: 26px;
+}
+.el-pagination.is-background .el-pager li:not(.disabled).active {
+    background-color: transparent;
+    color: #5D2BCF;
+    font-weight: bold;
+    border:1px solid #5D2BCF;
+}
+
+.el-pagination.is-background .el-pager li:not(.disabled):hover {
+    background: #5D2BCF;
+    color: #fff;
+    border:1px solid #5D2BCF;
+}
+
+/* Message 消息提示样式定制 byFeikeQ */
+.el-message--success {
+    background-color:rgba(28, 113, 218, 0.1);
+    border-color: #1C71DA;
+}
+.el-message .el-icon-success,.el-message--success .el-message__content{
+    color: #4C95FA;
+    font-size: 16px;
+}
+.el-message--success .el-message__content{
+    font-weight: bold;
+}
+
+.el-message--error {
+    background:rgba(252, 83, 83, 0.1);
+    border-color: #FC5353;
+}
+.el-message .el-icon-error,.el-message--error .el-message__content{
+    color: #FC5353;
+    font-size: 16px
+}
+.el-message--error .el-message__content{
+    font-weight: bold;
+}
+
+
+/* 消息提示弹层模态对话框组件样式 byFeikeQ */
+.el-message-box {
+    width: 360px;
+    background-color:#fff;
+    border-radius: 8px;
+    border: 1px solid #5D2BCF;
+    font-size: 14px;
+    text-align: left;
+}
+
+.el-message-box__title {
+    color:#333;
+    font-size: 20px;
+    font-weight: bold;
+}
+.el-message-box__content {
+    padding: 10px 15px;
+    color: #666;
+    font-size: 14px;
+}
+.el-message-box__btns{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* 弹出框的 按钮样式 byFeikeQ*/
+.el-button {
+    background:transparent;
+    border: 1px solid #999;
+    color: #999;
+    border-radius: 40px;
+    min-width: 72px;
+    height: 32px;
+}
+.el-button--primary:focus, .el-button--primary:hover,.el-button--primary.is-active, .el-button--primary:active {
+    background:transparent;
+    border-color: #999;
+    color: #999;
+}
+
+.el-button:focus, .el-button:hover {
+    background:transparent;
+    border-color: #999;
+    color: #999;
+}
+.el-message-box--center .el-message-box__content {
+    padding: 15px 27px ;
+}
+
+
+/* 
+    SEO容器 by FeikeQ
+    在一些服务端无法渲染的组件后加一个div把class设置为search-engine-optimization添加<nuxt-link> 组件即可.
+ */
+.search-engine-optimization{
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+    display: block;
+}
+canvas:focus{
+  outline: none !important;
+}
+
+/*css主要部分的样式*/
+/*定义滚动条宽高及背景，宽高分别对应横竖滚动条的尺寸*/
+
+::-webkit-scrollbar {
+width: 4px; /*对垂直流动条有效*/
+height: 10px; /*对水平流动条有效*/
+}
+
+/*定义滚动条的轨道颜色、内阴影及圆角*/
+::-webkit-scrollbar-track{
+ background: transparent;
+}
+
+
+/*定义滑块颜色、内阴影及圆角*/
+::-webkit-scrollbar-thumb{
+border-radius: 7px;
+background-color:rgba(255,255,255,.3);
+}
+
+/*定义两端按钮的样式*/
+::-webkit-scrollbar-button {
+ display:none;
+}
+
+/* 自定义table样式 */
+.custom-table{
+  width:100%;
+  font-size:14px;
+}
+.custom-table tr{
+  color:#333;
+  height:42px;
+}
+.custom-table thead{
+  color:#878B9A;
+}
+.custom-table tbody{
+  width:100%;
+ 
+  overflow-y:scroll;
+  display:block;
+}
+.custom-table thead, .custom-table tbody tr {
+  display:table;
+  width:100%;
+  table-layout:fixed;
+ }
+ .custom-table table thead {
+  width: calc( 100% - 1em )
+ }
